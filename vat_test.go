@@ -233,7 +233,7 @@ func TestRealMainOKMultipleCountries(t *testing.T) {
 		fmt.Fprint(w, string(response))
 	})
 	os.Setenv("SERVER_URL", server.URL)
-	os.Args = []string{"govat", "-countries=es,es"}
+	os.Args = []string{"govat", "-countries=es,de"}
 	result := realmain()
 	if result != 0 {
 		t.Errorf("Failed during test run")
