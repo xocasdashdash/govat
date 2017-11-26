@@ -7,4 +7,5 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=oven /go/src/github.com/xocasdashdash/govat/ .
+ENTRYPOINT [ "./govat" ]
 CMD ["./govat"]  
